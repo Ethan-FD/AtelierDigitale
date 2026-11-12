@@ -232,8 +232,8 @@ document.getElementById("qt").addEventListener("change",function(e){var v=e.targ
 grid.addEventListener("click",function(e){var b=e.target.closest("[data-q]");if(!b)return;if(qs.indexOf(b.dataset.q)<0)qs.push(b.dataset.q);drawQt();document.getElementById("devis").scrollIntoView({behavior:"smooth"})});
 document.getElementById("qf").addEventListener("submit",function(e){e.preventDefault();var f=e.target,names=P.filter(function(x){return qs.indexOf(x.id)>-1}).map(function(x){return x.n}).join(", ")||"À définir";
   var body="Nom : "+f.nom.value+"\nEntreprise : "+f.ent.value+"\nE-mail : "+f.mail.value+"\nÉquipe : "+f.nb.value+"\nServices : "+names+"\n\n"+f.msg.value;
-  var a=document.createElement("a");a.href="mailto:contact@atelierdudigitale.example?subject="+encodeURIComponent("Demande de devis Atelier du digitale")+"&body="+encodeURIComponent(body);a.click();
-  document.getElementById("qm").textContent="Votre messagerie s’ouvre avec la demande prête à envoyer. Sinon, écrivez-nous à contact@atelierdudigitale.example."});
+  var a=document.createElement("a");a.href="mailto:e.fromentdeudon@gmail.com?subject="+encodeURIComponent("Demande de devis Atelier du digitale")+"&body="+encodeURIComponent(body);a.click();
+  document.getElementById("qm").textContent="Votre messagerie s’ouvre avec la demande prête à envoyer. Sinon, écrivez-nous à e.fromentdeudon@gmail.com."});
 drawTabs();drawGrid();drawCmp();drawQt();
 function route(){var r=location.hash==="#realisations";document.getElementById("home").hidden=r;document.getElementById("real").hidden=!r;
   if(r){window.scrollTo(0,0)}else{var h=location.hash.slice(1),t=h&&document.getElementById(h);if(t)t.scrollIntoView();else window.scrollTo(0,0)}}
